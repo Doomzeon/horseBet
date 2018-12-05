@@ -1,0 +1,839 @@
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 0.8rem !important;
+    margin:0;
+    padding:0;
+    background: #F0F0F0;
+}
+.row{
+  margin-right: 0;
+}
+.col-sm-12{
+  padding-right: 0;
+}
+.buttonsArea {
+    padding-left: 10px;
+}
+.winButton {  /*Paolo*/
+   width: 60px;
+}
+.placeButton {  /*Paolo*/
+   width: 60px;
+}
+.tableButton {  /*Paolo*/
+   min-width: 50px;
+   min-height: 50px;
+   border-radius: 5px;
+}
+
+
+.quickPickSeparator {
+    padding-left: 15px;
+    margin-left: 2px;
+    padding-right: 15px !important;
+    margin-right: 15px !important;
+    background-color: rgb(11, 84, 148);
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.quickPickButton, .singleRunButton {
+    font-size: larger;
+}
+.quickPickButton:hover {
+    color: #8bc3ff ;
+}
+
+.checked {
+    color: orange;
+}
+
+.betingTable {
+    padding: 0px;
+    border: 1px!important;
+    margin: 0px !important;
+}
+
+.footerInfo {
+    padding: 10px;
+}
+
+.stateSelector {
+    font-weight: bold;
+}
+
+.stateSelectorCol {
+    margin-left: 0px;
+}
+
+/********************* Schedule Table **********************************/
+
+.schedulekSeparator {
+    background-color: rgb(11, 84, 148);
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    padding: inherit;
+}
+
+.scheduleTable {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.raceEndedTd{
+    padding-right: 0px;
+
+}
+
+.raceEnded{
+    background:url('../img/pin.png');
+    background-size:cover;
+    background-position: right 3px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+}
+
+
+/********************* QuickPick Table *********************************/
+
+.firstChoice {
+    color: white;
+    background-color: #4574b3;
+    /*background-color: #093687;*/
+    text-align: center;
+    font-weight: bold;
+    font-size: 9pt;
+    border: 1px solid white !important;
+    /* margin: 5px !important; */
+    padding: 5px !important;
+    vertical-align: middle !important;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+.firstChoice:hover, .secondChoice:hover, .firstChoiceSingleRun:hover {
+    background-color: #284081;
+}
+
+.secondChoice {
+    color: white;
+    /*background: #8bc3ff;*/
+    background-color: #7094C6;
+    text-align: center;
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 5px;
+    border: 1px solid white !important;
+    /* margin: 5px !important; */
+    vertical-align: middle !important;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+.horseTable {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    margin: 0 auto;
+    table-layout: fixed;
+}
+.scheduleTable{
+  color:black;
+  background: none;
+  transition: 0.9s;
+}
+.scheduleTable tr:hover{
+  background-color: #28a745;
+  color:white;
+  transition: 0.9s;
+}
+.horseTable tr:hover,  .aditionInfosOnSingleRun:hover {
+    background-color: rgba(0, 98, 223, .2);
+}
+
+.scheduleTable td,
+.scheduleTable th
+ {
+    padding: .75rem;
+
+}
+
+
+.horseTable th,
+.horseTable td {
+    padding-top: 0.1px !important;
+    padding-right: 2px !important;
+    padding-bottom: 0.1px !important;
+    padding-left: 2px !important;
+    vertical-align: middle;
+    /* min-width: 40px; */
+    /* max-width: 45px; */
+}
+
+.horseTable tbody {
+    width: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.Infos {
+    font-weight: bold;
+}
+
+.receCommentSection {
+    /* min-height: 90px!important; */
+}
+
+#raceComment {
+    padding: 10px;
+    opacity: 1;
+}
+
+
+.boxShadow {
+    -webkit-box-shadow: -2px 7px 36px -8px rgba(0,0,0,0.7);
+    -moz-box-shadow: -2px 7px 36px -8px rgba(0,0,0,0.7);
+    box-shadow: -2px 7px 36px -8px rgba(0,0,0,0.7);
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.fixedHeight {
+    min-height: 158px;
+}
+
+.rankingTable {
+    font-size: 16px;
+    padding: 10!important;
+}
+
+.rankingTable td, .rankingTable th {
+    padding: 5px;
+}
+
+/*################ Single Bet Menu ###############*/
+
+.scheduleBetNavMenu {
+    font-weight: bold;
+}
+
+.singleBet {
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle !important;
+}
+
+.singleBetTableResponsive, .singleBetTableResponsive>table {
+    width: 100%;
+    overflow-x: hidden;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.firstChoiceSingleRun {
+    color: white;
+    background-color: #4574b3;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid white !important;
+    margin: auto;
+    padding: 5px !important;
+    vertical-align: middle !important;
+    cursor: pointer;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.hiddenRow {
+    padding: 0 !important;
+}
+
+#betsCard {
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 14px !important;
+    align-items: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4rem;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+#hideBetsCard {
+    /* padding-top: 15px; */
+     padding-right: 10px;
+}
+
+.cyptoCurrencyModalBody {
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 1rem;
+    background-color: rgba(234, 248, 255, 0.3);
+}
+
+.compileMyBetHour {
+    font-weight: bold;
+    background-color: rgb(253, 247, 249);
+    padding: 0px;
+}
+
+.aditionInfosOnSingleRun {
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin-right: 0px;
+    text-align: center;
+    color: white;
+}
+
+a {
+    color: black;
+}
+
+.infoEwTerms {
+    margin-right : 0px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.secondPartInfos {
+    border-color: #5dbffd;
+    font-size: 13px;
+}
+
+.aditionInfosOnSingleRun>a {
+    text-decoration: none;
+}
+
+/*****************  Place Bets ********************/
+
+.placeBetsHeader {
+    background: rgba(0, 0, 0, .03);
+    height: 50px;
+    font-weight: bold;
+}
+
+.page-link {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.Forward{
+    border-right: 1px;
+}
+
+.betMoney {
+    width: 100%;
+}
+
+.wincheckbox, .ewcheckbox {
+    margin-left: 5px;
+}
+
+.cancelSingleBetEvent {
+    text-align: right !important;
+    float: right !important;
+    cursor: pointer;
+}
+
+/*********************** Pagination *************************/
+
+.pagination {
+    margin-right: 0px;
+    text-align: center !important;
+}
+
+.hourPaginator {
+    overflow: auto;
+    text-align: center;
+    margin-left: 0px;
+    padding-right : 4px;
+}
+
+.pagination>li {
+    width: 50px;
+    text-align: center !important;
+
+}
+
+.page-link {
+    font-size: 9pt;
+    border: 0px;
+    color : #4574b3;
+}
+.page-item{
+    /* width: 55px; */
+    margin: 0px;
+    border: 1px solid #e2e2e2;/*#429bfb;*/
+    border-right: 0px solid white;
+
+
+}
+.page-item.active .page-link {
+    background-color: #4574b3;
+    border-color: #4574b3;
+}
+
+.Backward {
+    width: 30px;
+}
+
+.Forward {
+    width: 30px;
+    border-right: 1px solid #e2e2e2;
+}
+
+.quickPickCard, .scheduleSection {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.rankingTable {
+    min-height: 250px;
+}
+
+/* Bet  */
+
+.primaryBetLi {
+    width: 50%;
+    cursor: pointer;
+}
+
+.combinationBetLi {
+    width: 50%;
+    cursor: pointer;
+    /* background-color: #dcbbbb; */
+}
+
+.errorCombination {
+    border: 2px solid red;
+    background: rgba(255, 183, 183, .2);
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 2px;
+}
+
+.alert-danger {
+    text-align: center;
+    font-size: 18px;
+}
+
+.actualCombinationsBetsTotal {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dd-select{
+    border : 0px;
+}
+/*************** FOOTER ******************/
+
+.websitefooter {
+    color: rgb(194, 194, 194);
+    background-color: rgb(30, 32, 34);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 0px;
+}
+
+.firstPartFooter {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.firstPartFooter>a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.secondPartFooter {
+    width: 50%;
+    margin: auto;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.secondPartFooter>a {
+    color: rgb(194, 194, 194);
+}
+
+.rightAlignmentFirstPartFooter {
+    margin-right: 10px;
+}
+
+.primaryNavbar {
+    height: 60px;
+    background-color: #283B42;
+    color:white;
+}
+
+
+
+.SecondNavRow {
+  margin-top: 60px;
+    background-image: url('../img/header.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 400px;
+    background-color: #093687;
+    border-radius : 0px;
+}
+
+.slogan {
+    text-align: center;
+    margin: auto;
+    font-size: 48px;
+    color: whitesmoke;
+    font-family: 'Krub', sans-serif;
+    font-weight: bold;
+}
+
+.progress {
+    height: 0.2rem !important;
+}
+
+.progress.active .progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+#cryptoCurrencySelection {
+    width: 100%;
+}
+
+.dd-options {
+    width: 100%;
+}
+
+.quickPickPlaceBetSection {
+    padding-right: 0px;
+    margin-right :0px
+}
+
+.stakPlaceHolder, .moneySection {
+    padding-left: 0rem;
+    padding-right: 0.2rem;
+}
+
+
+
+
+.wincheckbox {
+    margin-left: 0px;
+}
+
+.popupModalBody {
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.bitcoinPlaceHolder {
+    height: 95%!important;
+}
+
+.bitcoinPlaceHolder {
+    cursor: pointer;
+}
+
+.combinationStakeDiv {
+    padding-right: 0px;
+}
+
+.popupJockey{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #093687;
+}
+/*css schedina Vadym inizio*/
+.btnTipoSchedina,.cryptoCurrence,.TDCouponConfirm{
+  border:none;
+  border-radius: 0;
+  transition: 1s;
+  background-color: #4574b3;
+  padding:10px 0 10px 0;
+}
+.btnTipoSchedina:hover,.cryptoCurrence:hover{
+  background: #98B1C4;
+  color:white;
+  transition: 1s;
+}
+.nameStad,.dataRace,#betStadiumCouponConfim,#dateRaceCouponConfirm{
+  padding:15px 15px 15px 15px;
+  margin: 0;
+  background:#D1DDDB ;
+  font-size: 1em;
+}
+.shedinaFoot{
+  background-color: #283B42;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.nameHorse{
+  margin-top: 50px;
+  text-align: center;
+}
+.hideSchedina{
+  display:none;
+}
+#showSchedina{
+  display: none;
+  background: ;
+
+  border:none;
+  border-radius: 10PX;
+}
+#bet{
+  padding:5px 15px 5px 15px;
+}
+.tableInfoSched{
+  margin:0;
+}
+.tableInfoSched>tbody>tr>td{
+  text-align: center;
+}
+.odds{
+  text-align: center;
+	width: 100%;
+  border:none;
+  outline:none;
+  box-shadow: none;
+  transition: 0.4s;
+  border-bottom: 1px solid white;
+}
+.stake:hover{
+	border-bottom: 1px solid rgb(108, 108, 108);
+}
+.stake:focus{
+	border-bottom: 1px solid rgb(108, 108, 108);
+}
+.stake{
+  padding:10px 0 0 0;
+  text-align: center;
+}
+.tableInfoSched>thead>tr>th{
+  border:none;
+  text-align: center;
+}
+.tableInfoSched>tbody>tr>td{
+  padding-right: 10px;
+
+}
+.SOSchedina{
+  border:none;
+}
+.WPESchedina{
+  outline: none;
+  width: 50%;
+  height: 20px;
+  font-size: 14px;
+  border-radius: 0px;
+  border-radius: 3px;
+  margin-left: 70px;
+  margin-bottom: 15px;
+}
+.form-group {
+  border-radius: 0;
+}
+select, input[type="color" i][list] {
+    border-width: 0;
+    border-style: none;
+    border-color: rgb(166, 166, 166);
+}
+#elemCrypto{
+  margin: 0;
+}
+#exampleFormControlSelect1{
+  border:1px solid white;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.bodySchedina{
+  width:100%;
+}
+
+#coupons,.combOddsStake,.couponConfrimModalBody,.combOddsStakeConfrim{
+  border-bottom: 1px solid #283B42;
+  border-top:1px solid #283B42;
+}
+.modal-footer{
+  border-top:1px solid #283B42;
+}
+.activeSC{
+  background-color: #2c4484;
+  color:white;
+}
+select option[value="1"] {
+  /* value not val */
+  background: rgba(100, 100, 100, 0.3);
+}
+
+select option[value="2"] {
+  /* value not val */
+  background: rgba(200, 200, 200, 0.3);
+}
+.nameHorseConfirm{
+  text-align: center;
+  margin-top:15px;
+}
+/*Vadym style per gli eventi non compatibili 12/11/18 aggiungere questa classe al Paragrafo contenente il nome dello stadio e data*/
+.eventoNonCompatibile{
+  background-color:#FE7773;
+}
+/*Vadym 14/11/18*/
+.tabellaScheduleS{
+  background-color: ;
+}
+.card-header{
+  background: #283B42;
+  color:white;
+  font-size:1vw;
+}
+.card-body{
+  /* border:1px solid #283B42; */
+}
+.scheduleSection{
+  margin-top:40px;
+  border:none;
+}
+.quickPickCard{
+  border:none;
+  margin-top:40px;
+  /*margin:40px 40px 40px 10px;*/
+
+}
+#coupons{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.textAlertCombo,.textAlertSignle{
+  padding:15px 25px 15px 25px;
+  margin-bottom: 0px;
+  background:rgb(254, 119, 115);
+  border-right: 1px solid #283B42;
+  border-left:1px solid #283B42;
+}
+.textAlertNoBets{
+  padding:15px 25px 15px 25px;
+  margin-bottom: 0px;
+  background:rgba(103, 133, 230, 0.1);
+  border-right: 1px solid #283B42;
+  border-left:1px solid #283B42;
+}
+.close{
+  color:white;
+}
+
+.close:hover{
+  color:white;
+}
+.bodySchedina{
+  position:sticky;
+  margin-top:10px;
+  width: 300px;
+  right: 20px;
+  top:100px;
+}
+.nav-item>a{
+  color:white;
+  font-size: 16px;
+  transition: 0.5s;
+}
+.nav-item>a:hover{
+  color:#28a745;
+  transition: 0.5s;
+}
+.searchBet::placeholder{
+  color:white;
+  transition: 0.5s;
+}
+.searchBet :hover{
+  color:#28a745;
+}
+.searchBet{
+  margin-top:1px;
+  cursor:pointer;
+  width:70%;
+  margin-left:20px;
+  background-color:#283B42;
+  border:#283B42;
+  color:#283B42;
+  transition: 0.5s;
+}
+.nav-item ::before{
+  content: “\f13d”;
+font-family: “FontAwesome”;
+width: 10px;
+height: 10px;
+margin-right: 5px;
+}
+.staiumNameTableSchedule{
+  border-top:none;
+  border:none;
+  font-size: 15px;
+}
+.table td{
+  border:none;
+  font-size:
+}
+.table th{
+  border:none;
+}
+.raceEnded{
+  background: white;
+  color:grey;
+  border:1px solid #283B42 !important;
+  transition: 0.9s;
+}
+.raceEnded:hover{
+  background: #7094C6;
+  color:white;
+  border:1px solid #7094C6 !important;
+  transition: 0.9s;
+}
+ .td0,.td2,.td4,.td6,.td8,.td10,.td12,.td14{
+  background: ;
+}
+.horseTable,.singlePickTable{
+  padding:15px;
+  border-radius: 5px;
+  background: white;
+  box-shadow: -2px 7px 36px -8px rgba(0,0,0,0.7);
+}
+#raceComment:hover + .raceCommentHeader{
+  background: black;
+  color:pink;
+}

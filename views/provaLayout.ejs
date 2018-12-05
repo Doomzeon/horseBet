@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<% include /partials/head %>
+<body>
+<% include /partials/nav %>
+<div class="card .col-sm-12 SecondNavRow">
+    <div class="slogan"></div>
+</div>
+<div class="modal " id="couponWindow" tabindex="-1"  role="dialog">
+  <div class="modal-dialog" role="document" width="70%">
+    <div class="modal-content" style="border:none">
+      <div class="modal-header headerConfirmCoupon " style="background:#283B42;color:white;border:none">
+        <h5 class="modal-title" id="betIdCouponConfirm">Id of your coupon:123123123123</h5>
+
+      </div>
+      <div class="modal-body couponConfrimModalBody" style="padding-top:0;padding-left:0;padding-right:0; ">
+        <div class="row">
+              <div class="col-sm-12" style="">
+                <h6 class="TDCouponConfirm w-100" id="betTypeCouponConfirm" style="margin:0;color:white;text-align:center;">Type: Single</h6>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-sm-12" style="text-align:center">
+                <h6 class="TDCouponConfirm w-100"  id="betCouponCryptoConfirm" style="margin:0;color:white"></h6>
+              </div>
+            </div>
+        <div class="row ">
+          <div class="col-sm-12 bodyConfrimCoupon" >
+            <div class="addGareCC" style="overflow-y: auto;overflow-x: hidden;;height:340px;weight:300px;">
+
+            </div>
+            <div class="row userGeneralInfo" >
+                <div class="col-sm-12" >
+                  <form style="margin:30px">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Insert were to receive money</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Insert email to get notification about your coupon(not necessary)</label>
+                      <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Insert ????????</label>
+                      <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                    </div>
+                  </form>
+                </div>
+              </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer" style="background:#283B42;border-bottom:none;color:white;border:none;">
+        <button type="button" class="btn btn-primary">Confrim</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--fine-->
+    <div class="card col-sm-12 scheduleSection" >
+      <div class="row">
+        <div class="col-sm-1" style="padding:0;background:#F0F0F0"></div>
+        <div class="col-sm-10" style="padding:0;box-shadow: -2px 7px 36px -8px rgba(0,0,0,0.7);">
+          <div class="card-header">
+            <i class="fa fa-calendar" aria-hidden="true" style="color:"></i>
+              <b>Schedule</b>
+          </div>
+          <div class="card-body">
+
+
+<!-- Modal SignIn-->
+<div class="modal modalSignIn" id="couponWindow" tabindex="-1"  role="dialog">
+  <div class="modal-dialog" role="document" width="100%">
+    <div class="modal-content" style="border:none">
+      <div class="modal-header headerConfirmCoupon " >
+
+      </div>
+      <div class="modal-body " >
+
+      </div>
+      <div class="modal-footer" style="background:#283B42;border-bottom:none;color:white;border:none;">
+        <button type="button" class="btn btn-primary">Confrim</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!--Vadym 14/11/18-->
+              <div class="table-responsive tabellaScheduleS" style="height:200px; overflow:hidden;">
+                  <div>
+                      <ul class="nav nav-pills scheduleBetNavMenu">
+
+                      </ul>
+                  </div>
+                  <div>
+
+
+                      <table class="table scheduleTable">
+                        <tbody>
+                        <% for(var i=0;i<arraySTH.length;i++){%>
+                          <tr>
+                            <td class="staiumNameTableSchedule"><i class="fas fa-pennant" style="color:grey;"></i><%= arraySTH[i].stadium%></td>
+                            <% for(var a=0;a<arraySTH[i].orari.length;a++){%>
+                              <td class="raceEnded secondChoice"><%= arraySTH[i].orari[a]%></td>
+                            <% }%>
+                          <tr>
+                        <%}%>
+                        </tbody>
+                      </table>
+
+                  </div>
+              </div>
+
+          </div>
+        </div>
+        <div class="col-sm-1" style="padding:0;background:#F0F0F0"></div>
+      </div>
+    </div>
+
+    <div class="card col-sm-12 quickPickCard">
+      <div class="row">
+
+        <div class="col-sm-9" style="padding-right:0;margin-left:">
+        <b>
+            <div class="card-header quickPickHeaderName">
+                Quick Pick
+            </div>
+        </b>
+        <div class="card-body" style=";background:#f0f0f0">
+            <div class="bfh-selectbox bfh-languages pull-right" data-language="es" data-available="gl_ES,ca_ES,eu_ES,es_ES"
+                data-flags="false" data-blank="false"></div>
+            <div class="row">
+                <div class="col-sm-2 stateSelectorCol">
+                    <select class="form-control stateSelector">
+                      <option><%=country %></option>
+                      <optgroup label="---------------">
+                        <% for(var i=0;i<arraySTH.length;i++){%>
+                        <option><%= arraySTH[i].stadium%></option>
+                        <%}%>
+                      </optgroup>
+                    </select>
+                </div>
+                <div class="col-sm-7 hourPaginator table-responsive ">
+                    <ul class="pagination float-right  flex-wrap" href="#">
+                      <li class="page-item Backward disabled" style="width:25px;">
+                        <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true" style="margin-left:-5px">«</span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                      <% for(var i=0;i<sizeOfRaces;i++){%>
+                        <% if(i==0){%>
+                          <li class="page-item GB-20181026-<%= i%> active"><span class="page-link" href="#"><%= jsonDataMatches.races['GB-20181026-'+i].Data.time%></span></li>
+                        <%} else{%>
+                          <li class="page-item GB-20181026-<%= i%> "><span class="page-link" href="#"><%= jsonDataMatches.races['GB-20181026-'+i].Data.time%></span></li>
+                        <%}%>
+                      <% }%>
+                        <li class="page-item Forward disabled" style="width:25px;">
+                        <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true" style="margin-left:-5px">»</span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="row infoEwTerms">
+                <div class="col-sm-9 ">
+                    <div class="aditionInfosOnSingleRun" onclick="$('.stateSelector').prop('selectedIndex',0); loadSingleRun(currentID); return false;" style="background:white">
+                        <a href="#">
+                            <div class="col-sm Infos" >
+                              <img src="./img/en.jpg" alt="flag" width="35" height="22"><%= jsonDataMatches.races['GB-20181026-0'].Data.title%>
+                              <span class="secondPartInfos"><%= jsonDataMatches.races['GB-20181026-0'].Data.metadata%></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row quickPickPlaceBetSection">
+
+                <div class="col-sm-12">
+                    <div class="row receCommentSection">
+                        <div class="col-sm-4 rankingTable">
+                            <div class="boxShadow">
+                                <div class="card-header">
+                                    <h6><i class="fas fa-trophy" style="margin-right:10px;c"></i><b>Ranking</b></h6>
+                                </div>
+                                <div class="card-body fixedHeight" style="background:white">
+
+                                    <table class="table borderless timeFormRun">
+                                        <tbody>
+                                          <%for(var i=0;i<3;i++){%>
+                                            <%if(jsonDataMatches.races['GB-20181026-0'].Data.timeform[i].rating==5){%>
+                                              <tr>
+                                                <th scope="row"><%= i+1%></th>
+                                                <td class="nameHorse<%=i%> nameHorse"><%= jsonDataMatches.races['GB-20181026-0'].Data.timeform[i].horse_name%></td>
+                                                <td class="starsHorse<%=i%> starsHorse">
+                                                  <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+                                                </td>
+                                              </tr>
+                                            <%}else if(jsonDataMatches.races['GB-20181026-0'].Data.timeform[i].rating==4){%>
+                                              <tr>
+                                                <th scope="row"><%= i+1%></th>
+                                                <td class="nameHorse<%=i%> nameHorse"><%= jsonDataMatches.races['GB-20181026-0'].Data.timeform[i].horse_name%></td>
+                                                <td class="starsHorse<%=i%> starsHorse">
+                                                  <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+                                                </td>
+                                              </tr>
+                                            <%}else if(jsonDataMatches.races['GB-20181026-0'].Data.timeform[i].rating==3){%>
+                                              <tr>
+                                                <th scope="row"><%= i+1%></th>
+                                                <td class="nameHorse<%=i%> nameHorse"><%= jsonDataMatches.races['GB-20181026-0'].Data.timeform[i].horse_name%></td>
+                                                <td class="starsHorse<%=i%> starsHorse">
+                                                  <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+                                                </td>
+                                              </tr>
+                                            <%}else if(jsonDataMatches.races['GB-20181026-0'].Data.timeform[i].rating==2){%>
+                                              <tr>
+                                                <th scope="row"><%= i+1%></th>
+                                                <td class="nameHorse<%=i%> nameHorse"><%= jsonDataMatches.races['GB-20181026-0'].Data.timeform[i].horse_name%></td>
+                                                <td class="starsHorse<%=i%> starsHorse">
+                                                  <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
+                                                </td>
+                                              </tr>
+                                            <%}%>
+                                          <%}%>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8 commentSection">
+                            <div class="boxShadow">
+                                <div class="card-header raceCommentHeader" >
+
+                                    <h6><i class="fa fa-comments"  style="color:white;margin-right:10px"></i><b>Race Comment</b></h6>
+                                </div>
+                                <div class="card-body fixedHeight raceCommentDiv" style="background:white;">
+                                    <p id="raceComment">
+                                      <%= jsonDataMatches.races['GB-20181026-0'].Data.tip%>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="betingTable">
+
+                        <div class="row  singleBetTable singleBet" style="display:none">
+
+                            <div class="singleBetTableResponsive" style="height:100%">
+                                <table class="table singlePickTable" >
+                                    <tbody class="bodySinglePick" >
+                                        <tr>
+                                            <th colspan="2" style="width: 10%">#
+                                                <br /> Draw
+                                            </th>
+                                            <th style="width: 20%">Horse
+                                                <br />Recent Form
+                                            </th>
+                                            <th style="width: 20%">Jockey
+                                                <br />Trainer
+                                            </th>
+                                            <th style="width: 12%">Age</th>
+                                            <th style="width: 12%">Weight
+                                                <br /> (OR)
+                                            </th>
+                                            <th style="width: 10%">Previous Odds</th>
+                                            <th style="width: 6%">Win</th>
+                                            <th style="width: 6%">Place</th>
+                                        </tr>
+                                        <%for (var i=0;i<horseTableInfo[0].arrayHorsesName.length;i++){%>
+                                          <tr>
+                                            <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i].name].steccato%><br><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i].name].draw_label%></td>
+                                            <td>img</td>
+                                            <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i].name].horse%></td>
+                                            <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i].name].trainer%></td>
+                                            <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i].name].age%></td>
+                                            <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i].name].weight%></td>
+                                            <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i].name].previous_odds%></td>
+                                            <td><button class=" btn tableButton gb1 active firstChoice <%=horseTableInfo[0].race%>" onclick=""><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i].name].odds['win']%></button></td>
+                                            <td><button class=" btn tableButton gb1 active firstChoice <%=horseTableInfo[0].race%>" onclick=""><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i].name].odds['3 Places']%></button></td>
+                                          </tr>
+                                        <%}%>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive scheduleSection quickPickTable" style="box-shadow: -2px 7px 36px -8px rgba(0,0,0,0.7);">
+                            <table class="table horseTable" id="horseTableId">
+                                <tbody>
+                                  <% for (var d=0;d<=horseTableInfo[horseTableInfo.length-2].maxHorses;d++){%>
+                                  <tr class="td<%=d%>">
+                                    <%if(horseTableInfo[0].currentHorse<horseTableInfo[0].arrayHorsesName.length){%>
+                                      <td height="63" class="columnQuickPick columnStecattoLabelQuickPick <%=d%>td" style="opacity: 1;"><%= jsonDataMatches.races[horseTableInfo[0].race].Horses[horseTableInfo[0].arrayHorsesName[horseTableInfo[0].currentHorse].name].steccato %><br><%=jsonDataMatches.races[horseTableInfo[0].race].Horses[horseTableInfo[0].arrayHorsesName[horseTableInfo[0].currentHorse].name].draw_label %></td>
+                                      <td class="columnQuickPick columnImgQuickPick <%=d%>td"><img src="/img/<%= horseTableInfo[horseTableInfo.length-3].img[horseTableInfo[0].currentHorse].img%>" alt="Giubba" height="38"></td>
+                                      <td class="col-sm-3 columnHorseNameQuickPick columnQuickPick <%=d%>td" style="min-width: 100px; max-width: 100px; opacity: 1;"><b><%= jsonDataMatches.races[horseTableInfo[0].race].Horses[horseTableInfo[0].arrayHorsesName[horseTableInfo[0].currentHorse].name].horse %></b><br><%= jsonDataMatches.races[horseTableInfo[0].race].Horses[horseTableInfo[0].arrayHorsesName[horseTableInfo[0].currentHorse].name].jockey %></td>
+                                    <%}else{%>
+                                      <td height="63" class="columnQuickPick columnStecattoLabelQuickPick <%=d%>td" style="opacity: 1;"></td>
+                                      <td class="columnQuickPick columnImgQuickPick <%=d%>td" ></td>
+
+                                      <td class="col-sm-3 columnHorseNameQuickPick columnQuickPick <%=d%>td" style="min-width: 100px; max-width: 100px; opacity: 1;"></td>
+                                      <%}%>
+                                    <% for(var i=0;i<horseTableInfo[horseTableInfo.length-1].totRaces;i++){%>
+
+                                      <%if(horseTableInfo[i].currentHorse<horseTableInfo[i].arrayHorsesName.length){%>
+
+                                        <% var horseName=horseTableInfo[i].arrayHorsesName[horseTableInfo[i].currentHorse].name%>
+                                          <%if(i==0){%>
+                                            <td>
+                                              <button class="<%=horseTableInfo[i].race%> btn tableButton gb1 active firstChoice" onclick=""><%=jsonDataMatches.races[horseTableInfo[i].race].Horses[horseName].odds['win']%></button>
+                                            </td>
+                                          <%}else{%>
+                                            <td>
+                                              <button class="<%=horseTableInfo[i].race%> btn tableButton gb1 active secondChoice" onclick=""><%=jsonDataMatches.races[horseTableInfo[i].race].Horses[horseName].odds['win']%></button>
+                                            </td>
+                                          <%}%>
+
+                                        <% horseTableInfo[i].currentHorse +=1 %>
+                                        <%}else{%>
+                                          <td></td>
+                                        <%}%>
+                                    <%}%>
+                                  </tr>
+                                  <%}%>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                        <!--vadym inizio-->
+
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="ConfermationPopUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Confirm Bet</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body popupModalBody" style=" overflow-y: scroll; height:190px">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  </div>
+</div>
+  <div class="col-sm-3" style="background:#F0F0F0">
+          <div class="modal-dialog bodySchedina " >
+          <div class="boxShadow">
+          <div class="modal-content " style="border:none;border-radius:0">
+            <div class="modal-header" style="background:#283B42;border-bottom:none;color:white;border:none;">
+              <h4 class="modal-title" id="exampleModalLabel" >Bets</h4>
+              <button type="button" class="close" id="closeCoupon" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" >&times;</span>
+              </button>
+            </div>
+            <div class="modal-body "id="" style="padding:0">
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="btn-group d-flex " role="group" style="border-right: 1px solid #283B42;border-left: 1px solid #283B42;color:white">
+                    <a  class="btn btn-primary btnTipoSchedina w-100 activeSC typeCoupon" id="typeCouponS">Single</a>
+                    <a  class="btn btn-primary btnTipoSchedina w-100  typeCoupon" id="typeCouponC">Combination</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12" >
+                    <div class="dropdown" style="border-right: 1px solid #283B42;border-left: 1px solid #283B42;">
+                      <button class="btn btn-secondary dropdown-toggle w-100 cryptoCurrence" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Choose crypto currency</button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item cryptoChosen"><img src="https://png.icons8.com/color/1600/bitcoin.png" class="crypto" width="10%"> BTC</a>
+                        <a class="dropdown-item cryptoChosen"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/2000px-Ethereum_logo_2014.svg.png" class="crypto" width="6%">ETH</a>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="row alertCombo" style="margin-bottom:0">
+                <div class="col-sm-12 alertCombo" ><h6 class="textAlertCombo" >Some bets are not compatible in combination mode. Remove the red ones.</h6></div>
+              </div>
+              <div class="row attNoBets" style="margin-bottom:0">
+                <div class="col-sm-12 " ><h6 class="textAlertNoBets" >Click on the blue buttons to add your bets.</h6></div>
+              </div>
+              <div class="row alertSingle" style="margin-bottom:0">
+                <div class="col-sm-12 " ><h6 class="textAlertSignle" >Bet already added.</h6></div>
+              </div>
+              <div id="coupons">
+
+              </div>
+              <div>
+                <div class="row combOddsStake" style="margin:0">
+                  <div class="col-sm-6">
+                    <p id="totalOdds"></p>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group" style="width:100%">
+                    <input type="number" class=" odds " id="oddsT" placeholder="Insert odds">
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer shedinaFoot">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" id="removeTutteGare">Remove all! </button>
+              <button type="button" class="btn btn-primary " id="bet">Bet</button>
+            </div>
+          </div>
+          </div>
+
+      </div>
+      <div class="" style="float:right; position:sticky; right:1px;width:50px; top: 550px;">
+      <button type="button"   id="showSchedina"><i style="font-size:24px" class="fa">&#xf100;</i></button>
+      </div>
+      </div>
+  </div>
+</div>
+<div class=" websitefooter">
+    <div class="row firstPartFooter">
+        <a href"#">Termini</a>
+        <a href"#">Privacy</a>
+        <div class="float rightAlignmentFirstPartFooter">
+            <i class="fab fa-telegram-plane"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </div>
+    <hr color="white" style="width:50%; margin:auto">
+    <div class="row secondPartFooter">
+    </div>
+</div>
+<script src="js/main-min.js"></script>
+<script src="node-modules/socket.io/socket.io.js">var socket=io();</script>
+
+</body>
+
+</html>

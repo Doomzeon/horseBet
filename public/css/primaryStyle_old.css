@@ -1,0 +1,698 @@
+body {
+    overflow-y: scroll;
+    font-size: 0.8rem !important;
+    margin:0;
+    padding:0;
+    background: #F8F8F8;
+}
+
+.buttonsArea {
+    padding-left: 10px;
+}
+.winButton {  /*Paolo*/
+   width: 60px;
+}
+.placeButton {  /*Paolo*/
+   width: 60px;
+}
+.tableButton {  /*Paolo*/
+   min-width: 50px;
+   min-height: 50px;
+   border-radius: 5px;
+}
+.quickPickSeparator {
+    padding-left: 15px;
+    margin-left: 2px;
+    padding-right: 15px !important;
+    margin-right: 15px !important;
+    background-color: rgb(11, 84, 148);
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.quickPickButton, .singleRunButton {
+    font-size: larger;
+}
+.quickPickButton:hover {
+    color: #8bc3ff ;
+}
+
+.checked {
+    color: orange;
+}
+
+.betingTable {
+    padding: 0px;
+    border: 1px!important;
+    margin: 0px !important;
+}
+
+.footerInfo {
+    padding: 10px;
+}
+
+.stateSelector {
+    font-weight: bold;
+}
+
+.stateSelectorCol {
+    margin-left: 0px;
+}
+
+/********************* Schedule Table **********************************/
+
+.schedulekSeparator {
+    background-color: rgb(11, 84, 148);
+    color: whitesmoke;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    padding: inherit;
+}
+
+.scheduleTable {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/********************* QuickPick Table *********************************/
+
+.firstChoice {
+    color: white;
+    background-color: #007bff;
+    /*background-color: #093687;*/
+    text-align: center;
+    font-weight: bold;
+    font-size: 11pt;
+    border: 2px solid white !important;
+    margin: auto;
+    padding: 5px !important;
+    vertical-align: middle !important;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+.firstChoice:hover, .secondChoice:hover, .firstChoiceSingleRun:hover {
+    background-color: #093687;
+}
+
+.secondChoice {
+    color: white;
+    /*background: #8bc3ff;*/
+    background-color: rgba(38, 123, 233, 0.8);
+    text-align: center;
+    font-size: 9pt;
+    font-weight: bold;
+    padding: 5px !important;
+    border: 2px solid white !important;
+    margin: 5px !important;
+    vertical-align: middle !important;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+.horseTable {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    margin: 0 auto;
+    table-layout: fixed;
+}
+
+.horseTable tr:hover, .scheduleTable tr:hover, .aditionInfosOnSingleRun:hover {
+    background-color: rgba(0, 98, 223, .2);
+}
+
+.horseTable td {
+    min-width: 50px;
+}
+
+.horseTable tbody {
+    width: 100%;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.Infos {
+    font-weight: bold;
+}
+
+.receCommentSection {
+    /* min-height: 90px!important; */
+}
+
+#raceComment {
+    padding: 10px;
+    opacity: 1;
+}
+
+
+
+.rankingTable {
+    font-size: 16px;
+    padding: 10!important;
+}
+
+.rankingTable td, .rankingTable th {
+    padding: 5px;
+}
+
+/*################ Single Bet Menu ###############*/
+
+.scheduleBetNavMenu {
+    font-weight: bold;
+}
+
+.singleBet {
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle !important;
+}
+
+.singleBetTableResponsive, .singleBetTableResponsive>table {
+    width: 100%;
+    overflow-x: hidden;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.firstChoiceSingleRun {
+    color: white;
+    background-color: #007bff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2px solid white !important;
+    margin: auto;
+    padding: 5px !important;
+    vertical-align: middle !important;
+    cursor: pointer;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.hiddenRow {
+    padding: 0 !important;
+}
+
+#betsCard {
+    font-family: "Times New Roman", Times, serif !important;
+    font-size: 14px !important;
+    align-items: flex-start;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4rem;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+#hideBetsCard {
+    /* padding-top: 15px; */
+     padding-right: 10px;
+}
+
+.cyptoCurrencyModalBody {
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 1rem;
+    background-color: rgba(234, 248, 255, 0.3);
+}
+
+.compileMyBetHour {
+    font-weight: bold;
+    background-color: rgb(253, 247, 249);
+    padding: 0px;
+}
+
+.aditionInfosOnSingleRun {
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin-right: 0px;
+    text-align: center;
+    color: white;
+}
+
+a {
+    color: black;
+}
+
+.infoEwTerms {
+    margin-right : 0px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.secondPartInfos {
+    border-color: #5dbffd;
+    font-size: 13px;
+}
+
+.aditionInfosOnSingleRun>a {
+    text-decoration: none;
+}
+
+/*****************  Place Bets ********************/
+
+.placeBetsHeader {
+    background: rgba(0, 0, 0, .03);
+    height: 50px;
+    font-weight: bold;
+}
+
+.page-link {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.Forward{
+    border-right: 1px;
+}
+
+.betMoney {
+    width: 100%;
+}
+
+.wincheckbox, .ewcheckbox {
+    margin-left: 5px;
+}
+
+.cancelSingleBetEvent {
+    text-align: right !important;
+    float: right !important;
+    cursor: pointer;
+}
+
+/*********************** Pagination *************************/
+
+.pagination {
+    margin-right: 0px;
+    text-align: center !important;
+}
+
+.hourPaginator {
+    overflow: auto;
+    text-align: center;
+    margin-left: 0px;
+    padding-right : 4px;
+}
+
+.pagination>li {
+    width: 50px;
+    text-align: center !important;
+}
+
+.page-link {
+    font-size: 9pt;
+    border: 0px;
+}
+.page-item{
+    /* width: 55px; */
+    margin: 0px;
+    border: 1px solid #e2e2e2;/*#429bfb;*/
+    border-right: 0px solid white;
+}
+
+.Backward {
+    width: 30px;
+}
+
+.Forward {
+    width: 30px;
+    border-right: 1px solid #e2e2e2;
+}
+
+.quickPickCard, .scheduleSection {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.rankingTable {
+    min-height: 250px;
+}
+
+/* Bet  */
+
+.primaryBetLi {
+    width: 50%;
+    cursor: pointer;
+}
+
+.combinationBetLi {
+    width: 50%;
+    cursor: pointer;
+    /* background-color: #dcbbbb; */
+}
+
+.errorCombination {
+    border: 2px solid red;
+    background: rgba(255, 183, 183, .2);
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 2px;
+}
+
+.alert-danger {
+    text-align: center;
+    font-size: 18px;
+}
+
+.actualCombinationsBetsTotal {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dd-select{
+    border : 0px;
+}
+/*************** FOOTER ******************/
+
+.websitefooter {
+    color: rgb(194, 194, 194);
+    background-color: rgb(30, 32, 34);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 0px;
+}
+
+.firstPartFooter {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    font-size: 13px;
+}
+
+.firstPartFooter>a {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.secondPartFooter {
+    width: 50%;
+    margin: auto;
+    font-size: 12px;
+    padding: 10px;
+}
+
+.secondPartFooter>a {
+    color: rgb(194, 194, 194);
+}
+
+.rightAlignmentFirstPartFooter {
+    margin-right: 10px;
+}
+
+.primaryNavbar {
+    height: 50px;
+    background-color: rgb(59, 58, 58) !important;
+}
+
+
+
+.SecondNavRow {
+    margin-top: 48px;
+    background-image: url('../img/header.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 400px;
+    background-color: #093687;
+    border : 0px;
+}
+
+.slogan {
+    text-align: center;
+    margin: auto;
+    font-size: 48px;
+    color: whitesmoke;
+    font-family: 'Krub', sans-serif;
+    font-weight: bold;
+}
+
+.progress {
+    height: 0.2rem !important;
+}
+
+.progress.active .progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+
+#cryptoCurrencySelection {
+    width: 100%;
+}
+
+.dd-options {
+    width: 100%;
+}
+
+.quickPickPlaceBetSection {
+    padding-right: 0px;
+    margin-right :0px
+}
+
+.stakPlaceHolder, .moneySection {
+    padding-left: 0rem;
+    padding-right: 0.2rem;
+}
+
+.card-body {
+    padding-right: 0px;
+}
+
+
+.wincheckbox {
+    margin-left: 0px;
+}
+
+.popupModalBody {
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.bitcoinPlaceHolder {
+    height: 95%!important;
+}
+
+.bitcoinPlaceHolder {
+    cursor: pointer;
+}
+
+.combinationStakeDiv {
+    padding-right: 0px;
+}
+
+.popupJockey{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #093687;
+}
+/*css schedina Vadym inizio*/
+.btnTipoSchedina,.cryptoCurrence,.TDCouponConfirm{
+  border:none;
+  border-radius: 0;
+  transition: 1s;
+  background-color: #1D6A96;
+  padding:10px 0 10px 0;
+}
+.btnTipoSchedina:hover,.cryptoCurrence:hover{
+  background: #98B1C4;
+  color:white;
+  transition: 1s;
+}
+.nameStad,.dataRace,#betStadiumCouponConfim,#dateRaceCouponConfirm{
+  padding:15px 15px 15px 15px;
+  margin: 0;
+  background:#D1DDDB ;
+  font-size: 1em;
+}
+.shedinaFoot{
+  background-color: #283B42;
+}
+.nameHorse{
+  margin-top: 50px;
+  text-align: center;
+}
+.hideSchedina{
+  display:none;
+}
+#showSchedina{
+  display: none;
+  background: ;
+
+  border:none;
+  border-radius: 10PX;
+}
+#bet{
+  padding:5px 15px 5px 15px;
+}
+.tableInfoSched{
+  margin:0;
+}
+.tableInfoSched>tbody>tr>td{
+  text-align: center;
+}
+.odds,.stake{
+  text-align: center;
+	width: 100%;
+  border:none;
+  outline:none;
+  box-shadow: none;
+  transition: 0.4s;
+  border-bottom: 1px solid white;
+}
+.stake:hover{
+	border-bottom: 1px solid rgb(108, 108, 108);
+}
+.stake:focus{
+	border-bottom: 1px solid rgb(108, 108, 108);
+}
+.stake{
+  padding:10px 0 0 0;
+  text-align: center;
+  background: #F8F8F8;
+  border:1px #F8F8F8 solid;
+}
+.tableInfoSched>thead>tr>th{
+  border:none;
+  text-align: center;
+}
+.tableInfoSched>tbody>tr>td{
+  padding-right: 10px;
+
+}
+.SOSchedina{
+  border:none;
+}
+.WPESchedina{
+  outline: none;
+  width: 50%;
+  height: 20px;
+  font-size: 14px;
+  border-radius: 0px;
+  border-radius: 3px;
+  margin-left: 70px;
+  margin-bottom: 15px;
+}
+.form-group {
+  border-radius: 0;
+}
+select, input[type="color" i][list] {
+    border-width: 0;
+    border-style: none;
+    border-color: rgb(166, 166, 166);
+}
+#elemCrypto{
+  margin: 0;
+}
+#exampleFormControlSelect1{
+  border:1px solid white;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+.bodySchedina{
+  width:100%;
+}
+
+#coupons,.combOddsStake,.couponConfrimModalBody,.combOddsStakeConfrim{
+  border-right: 1px solid #283B42;
+  border-top:1px solid #283B42;
+  border-left: 1px solid #283B42;
+}
+.modal-footer{
+  border-top:1px solid #283B42;
+}
+.activeSC{
+  background-color: #98B1C4;
+    color:white;
+}
+select option[value="1"] {
+  /* value not val */
+  background: rgba(100, 100, 100, 0.3);
+}
+
+select option[value="2"] {
+  /* value not val */
+  background: rgba(200, 200, 200, 0.3);
+}
+.nameHorseConfirm{
+  text-align: center;
+  margin-top:15px;
+}
+/*Vadym style per gli eventi non compatibili 12/11/18 aggiungere questa classe al Paragrafo contenente il nome dello stadio e data*/
+.eventoNonCompatibile{
+  background-color:#FE7773;
+}
+/*Vadym 14/11/18*/
+.tabellaScheduleS{
+  background-color: #e0e0e0;
+}
+.card-header{
+  background: #283B42;
+  color:white;
+  font-size:1vw;
+}
+.card-body{
+  border:1px solid #283B42;
+}
+.scheduleSection{
+  margin-top:40px;
+  border:none;
+}
+.quickPickCard{
+  border:none;
+  margin-top:40px;
+  /*margin:40px 40px 40px 10px;*/
+
+}
+#coupons{
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.textAlertCombo,.textAlertNoBets,.textAlertSignle{
+  padding:15px 25px 15px 25px;
+  margin-bottom: 0px;
+  background:rgb(254, 119, 115);
+  border-right: 1px solid #283B42;
+  border-left:1px solid #283B42;
+}
+.close{
+  color:white;
+}
+
+.close:hover{
+  color:white;
+}
+.bodySchedina{
+  position:sticky;
+  margin-top:10px;
+  width: 300px;
+  right: 20px;
+  top:100px;
+}

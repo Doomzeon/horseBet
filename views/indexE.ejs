@@ -1,0 +1,28 @@
+<% if(i==0&&jsonDataMatches.races[horseTableInfo[i].race].Horses[horseName].horse!=""){%>
+  <td class="col-sm-3 columnHorseNameQuickPick columnQuickPick" style="min-width: 200px; max-width: 200px; opacity: 1;"><b><%= jsonDataMatches.races[horseTableInfo[i].race].Horses[horseName].horse %></b><br><%= jsonDataMatches.races[horseTableInfo[i].race].Horses[horseName].jockey %></td>
+<%}else{%>
+  <td class="col-sm-3 columnHorseNameQuickPick columnQuickPick" style="min-width: 200px; max-width: 200px; opacity: 1;"></td>
+  <%}%>
+
+
+  <%if(i==0){%>
+    <td class="col-sm-3 columnHorseNameQuickPick columnQuickPick" style="min-width: 200px; max-width: 200px; opacity: 1;">eee</td>
+  <%}else{%>
+    <td class="col-sm-3 columnHorseNameQuickPick columnQuickPick" style="min-width: 200px; max-width: 200px; opacity: 1;"></td>
+  <%}%>
+
+
+
+  <%for (var i=0;i<horseTableInfo[0].arrayHorsesName.length;i++){%>
+    <tr>
+      <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i]].steccato<br>jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i]].draw_label%></td>
+      <td>img</td>
+      <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i]].horse%></td>
+      <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i]].trainer%></td>
+      <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i]].age%></td>
+      <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i]].weight%></td>
+      <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i]].previous_odds%></td>
+      <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i]].odds['win']%></td>
+      <td><%=jsonDataMatches.races['GB-20181026-0'].Horses[horseTableInfo[0].arrayHorsesName[i]].odds['3 Places']%></td>
+    </tr>
+  <%}%>
